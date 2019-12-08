@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 100vh;
+  background-image: url("/images/headerphoto.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+header .container {
+  margin: 0;
+  padding-top: 20px;
+}
+
+header .container .logo {
+  text-align: center;
+}
+
+header .container .logo a {
+  line-height: 60px;
+  text-decoration: none;
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+  color: green;
+}
+
+header .container .navigation ul {
+  list-style: none;
+  text-align: center;
+}
+
+header .container .navigation ul li {
+  display: inline-block;
+  margin-right: 5px;
+  height: 60px;
+}
+
+header .container .navigation ul li a {
+  display: block;
+  color: green;
+  line-height: 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+header .container .navigation ul li a:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=style.css.map */
