@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Roboto Mono", monospace;
+}
+
+p {
+  font-family: "Gupter", serif;
+}
+
 header {
   height: 100vh;
   max-width: 1360px;
@@ -96,5 +104,52 @@ header .welcome .wrapper button {
   border: none;
   background-color: #4d260c;
   color: green;
+}
+
+.services {
+  height: 70vh;
+  padding: 5% 0;
+}
+
+.services h2 {
+  font-size: 40px;
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+}
+
+.services .postscript {
+  text-align: center;
+  font-family: "Gupter", serif;
+  font-style: italic;
+  color: gray;
+  padding-top: 10px;
+}
+
+.services .row {
+  margin-top: 10%;
+}
+
+.services .row div {
+  text-align: center;
+}
+
+.services .row div p {
+  letter-spacing: 2px;
+  color: gray;
+}
+
+.services .row div i {
+  border: 4px solid #4d260c;
+  border-radius: 50%;
+  padding: 20px;
+  color: #4d260c;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.services .row div h4 {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=style.css.map */

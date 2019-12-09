@@ -11,7 +11,13 @@ serif;
     box-sizing: border-box;
 }
 
+body {
+    font-family: $primary-font;
+}
 
+p {
+    font-family: $second-font;
+}
 
 header {
     height: 100vh;
@@ -107,6 +113,53 @@ header {
                 border: none;
                 background-color: $second-color;
                 color: $primary-color;
+            }
+        }
+    }
+}
+
+.services {
+    height: 70vh;
+    padding: 5% 0;
+
+    h2 {
+        font-size: 40px;
+        text-align: center;
+        font-family: $primary-font;
+        text-transform: uppercase;
+    }
+
+    .postscript {
+        text-align: center;
+        font-family: $second-font;
+        font-style: italic;
+        color: gray;
+        padding-top: 10px;
+    }
+
+    .row {
+        margin-top: 10%;
+
+        div {
+            text-align: center;
+
+            p {
+                letter-spacing: 2px;
+                color: gray;
+            }
+
+            i {
+                border: 4px solid $second-color;
+                border-radius: 50%;
+                padding: 20px;
+                color: $second-color;
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+
+            h4 {
+                font-size: 24px;
+                margin-bottom: 20px;
             }
         }
     }
