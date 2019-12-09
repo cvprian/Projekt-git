@@ -1,4 +1,9 @@
 $primary-color: green;
+$second-color: rgb(77, 38, 12);
+$primary-font: 'Roboto Mono',
+monospace;
+$second-font: 'Gupter',
+serif;
 
 * {
     margin: 0;
@@ -10,6 +15,8 @@ $primary-color: green;
 
 header {
     height: 100vh;
+    max-width: 1360px;
+    margin: auto;
     background-image: url("/images/headerphoto.jpg");
     background-position: center;
     background-size: cover;
@@ -26,7 +33,7 @@ header {
                 text-decoration: none;
                 font-family: 'Dancing Script', cursive;
                 font-size: 40px;
-                color: $primary-color;
+                color: $second-color;
             }
         }
 
@@ -42,6 +49,7 @@ header {
 
                     a {
                         display: block;
+                        font-family: $primary-font;
                         color: $primary-color;
                         line-height: 60px;
                         text-decoration: none;
@@ -54,6 +62,51 @@ header {
                         text-decoration: underline;
                     }
                 }
+            }
+        }
+    }
+
+    .welcome {
+        height: 80vh;
+
+
+        .wrapper {
+            position: relative;
+            top: 30%;
+            height: 40%;
+
+            width: 80%;
+            margin: auto;
+            text-align: center;
+
+
+            h2 {
+                font-size: 40px;
+                margin: 20px;
+                color: $primary-color;
+                font-family: $second-font;
+                font-style: italic;
+            }
+
+            h1 {
+                font-family: $primary-font;
+                font-size: 60px;
+                text-transform: uppercase;
+                margin: 20px;
+                color: $primary-color;
+            }
+
+            button {
+                font-family: $primary-font;
+                font-weight: bold;
+                padding: 20px 30px;
+                font-size: 20px;
+                text-transform: uppercase;
+                margin: 20px;
+                border-radius: 5px;
+                border: none;
+                background-color: $second-color;
+                color: $primary-color;
             }
         }
     }

@@ -6,6 +6,8 @@
 
 header {
   height: 100vh;
+  max-width: 1360px;
+  margin: auto;
   background-image: url("/images/headerphoto.jpg");
   background-position: center;
   background-size: cover;
@@ -25,7 +27,7 @@ header .container .logo a {
   text-decoration: none;
   font-family: 'Dancing Script', cursive;
   font-size: 40px;
-  color: green;
+  color: #4d260c;
 }
 
 header .container .navigation ul {
@@ -41,6 +43,7 @@ header .container .navigation ul li {
 
 header .container .navigation ul li a {
   display: block;
+  font-family: "Roboto Mono", monospace;
   color: green;
   line-height: 60px;
   text-decoration: none;
@@ -51,5 +54,47 @@ header .container .navigation ul li a {
 
 header .container .navigation ul li a:hover {
   text-decoration: underline;
+}
+
+header .welcome {
+  height: 80vh;
+}
+
+header .welcome .wrapper {
+  position: relative;
+  top: 30%;
+  height: 40%;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+header .welcome .wrapper h2 {
+  font-size: 40px;
+  margin: 20px;
+  color: green;
+  font-family: "Gupter", serif;
+  font-style: italic;
+}
+
+header .welcome .wrapper h1 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 60px;
+  text-transform: uppercase;
+  margin: 20px;
+  color: green;
+}
+
+header .welcome .wrapper button {
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
+  padding: 20px 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4d260c;
+  color: green;
 }
 /*# sourceMappingURL=style.css.map */
