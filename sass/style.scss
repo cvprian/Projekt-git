@@ -13,6 +13,8 @@ serif;
 
 body {
     font-family: $primary-font;
+    max-width: 1360px;
+    margin: 0 auto;
 }
 
 p {
@@ -21,7 +23,6 @@ p {
 
 header {
     height: 100vh;
-    max-width: 1360px;
     margin: auto;
     background-image: url("/images/headerphoto.jpg");
     background-position: center;
@@ -163,4 +164,93 @@ header {
             }
         }
     }
+}
+
+.portfolio {
+    height: 100vh;
+    background-color: aliceblue;
+    padding: 40px 0;
+
+    h2 {
+        font-size: 40px;
+        text-align: center;
+        font-family: $primary-font;
+        text-transform: uppercase;
+    }
+
+    .postscript {
+        text-align: center;
+        font-family: $second-font;
+        font-style: italic;
+        color: gray;
+        padding-top: 10px;
+    }
+
+    .row {
+        margin-top: 50px;
+    }
+
+    .element {
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 100%;
+        }
+
+
+        .description {
+            height: 100px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+
+
+        }
+    }
+}
+
+footer {
+    height: 10vh;
+
+    .container {
+        height: 100%;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+
+            li {
+                a {
+                    display: block;
+                    width: 50px;
+                    height: 50px;
+                    background-color: red;
+                    text-align: center;
+                    position: relative;
+                    border-radius: 50%;
+
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+
+        }
+    }
+
 }

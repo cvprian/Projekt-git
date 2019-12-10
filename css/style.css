@@ -6,6 +6,8 @@
 
 body {
   font-family: "Roboto Mono", monospace;
+  max-width: 1360px;
+  margin: 0 auto;
 }
 
 p {
@@ -14,7 +16,6 @@ p {
 
 header {
   height: 100vh;
-  max-width: 1360px;
   margin: auto;
   background-image: url("/images/headerphoto.jpg");
   background-position: center;
@@ -151,5 +152,97 @@ header .welcome .wrapper button {
 .services .row div h4 {
   font-size: 24px;
   margin-bottom: 20px;
+}
+
+.portfolio {
+  height: 100vh;
+  background-color: aliceblue;
+  padding: 40px 0;
+}
+
+.portfolio h2 {
+  font-size: 40px;
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+}
+
+.portfolio .postscript {
+  text-align: center;
+  font-family: "Gupter", serif;
+  font-style: italic;
+  color: gray;
+  padding-top: 10px;
+}
+
+.portfolio .row {
+  margin-top: 50px;
+}
+
+.portfolio .element {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.portfolio .element img {
+  width: 100%;
+}
+
+.portfolio .element .description {
+  height: 100px;
+  background-color: white;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+footer {
+  height: 10vh;
+}
+
+footer .container {
+  height: 100%;
+}
+
+footer .row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 100%;
+}
+
+footer .row ul {
+  list-style: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .row ul li a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  text-align: center;
+  position: relative;
+  border-radius: 50%;
+}
+
+footer .row ul li a i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 /*# sourceMappingURL=style.css.map */
