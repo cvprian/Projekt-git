@@ -80,7 +80,6 @@ header {
     .welcome {
         display: flex;
         align-items: center;
-
         flex-grow: 1;
 
         .container {
@@ -215,9 +214,6 @@ header {
             flex-direction: column;
             align-items: center;
             justify-content: center;
-
-
-
         }
     }
 }
@@ -231,7 +227,7 @@ footer {
 
     .row {
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
         align-items: center;
         height: 100%;
 
@@ -241,16 +237,19 @@ footer {
             justify-content: space-around;
 
             li {
+
+
                 a {
                     display: block;
                     width: 50px;
                     height: 50px;
-                    background-color: red;
+                    background-color: black;
                     text-align: center;
                     position: relative;
                     border-radius: 50%;
 
                     i {
+                        color: white;
                         position: absolute;
                         top: 50%;
                         left: 50%;
@@ -261,5 +260,4 @@ footer {
 
         }
     }
-
 }
