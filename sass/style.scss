@@ -22,102 +22,111 @@ p {
 }
 
 header {
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     margin: auto;
     background-image: url("/images/headerphoto.jpg");
     background-position: center;
     background-size: cover;
 
-    .container {
-        margin: 0;
-        padding-top: 20px;
+    .menu {
+        .container {
+            padding-top: 30px;
 
-        .logo {
-            text-align: center;
-
-            a {
-                line-height: 60px;
-                text-decoration: none;
-                font-family: 'Dancing Script', cursive;
-                font-size: 40px;
-                color: $second-color;
-            }
-        }
-
-        .navigation {
-            ul {
-                list-style: none;
+            .logo {
                 text-align: center;
 
-                li {
-                    display: inline-block;
-                    margin-right: 5px;
-                    height: 60px;
+                a {
+                    line-height: 60px;
+                    text-decoration: none;
+                    font-family: 'Dancing Script', cursive;
+                    font-size: 40px;
+                    color: $second-color;
+                }
+            }
 
-                    a {
-                        display: block;
-                        font-family: $primary-font;
-                        color: $primary-color;
-                        line-height: 60px;
-                        text-decoration: none;
-                        text-transform: uppercase;
-                        padding: 0 10px;
-                        font-size: 14px;
-                    }
+            .navigation {
+                ul {
+                    list-style: none;
+                    text-align: center;
 
-                    a:hover {
-                        text-decoration: underline;
+                    li {
+                        display: inline-block;
+                        margin-right: 5px;
+                        height: 60px;
+
+                        a {
+                            display: block;
+                            font-family: $primary-font;
+                            color: $primary-color;
+                            line-height: 60px;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            padding: 0px 10px;
+                            font-size: 14px;
+                        }
+
+                        a:hover {
+                            text-decoration: underline;
+                        }
                     }
                 }
             }
         }
+
     }
 
     .welcome {
-        height: 80vh;
+        display: flex;
+        align-items: center;
 
+        flex-grow: 1;
 
-        .wrapper {
-            position: relative;
-            top: 30%;
-            height: 40%;
+        .container {
+            .row {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
 
-            width: 80%;
-            margin: auto;
-            text-align: center;
+                h2 {
+                    font-size: 40px;
+                    margin: 20px;
+                    color: $primary-color;
+                    font-family: $second-font;
+                    font-style: italic;
+                }
 
+                h1 {
+                    font-family: $primary-font;
+                    font-size: 60px;
+                    text-transform: uppercase;
+                    margin: 20px;
+                    color: $primary-color;
+                }
 
-            h2 {
-                font-size: 40px;
-                margin: 20px;
-                color: $primary-color;
-                font-family: $second-font;
-                font-style: italic;
+                button {
+                    font-family: $primary-font;
+                    font-weight: bold;
+                    padding: 20px 30px;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    margin: 20px;
+                    border-radius: 5px;
+                    border: none;
+                    background-color: $second-color;
+                    color: $primary-color;
+                }
             }
 
-            h1 {
-                font-family: $primary-font;
-                font-size: 60px;
-                text-transform: uppercase;
-                margin: 20px;
-                color: $primary-color;
-            }
-
-            button {
-                font-family: $primary-font;
-                font-weight: bold;
-                padding: 20px 30px;
-                font-size: 20px;
-                text-transform: uppercase;
-                margin: 20px;
-                border-radius: 5px;
-                border: none;
-                background-color: $second-color;
-                color: $primary-color;
-            }
         }
+
     }
 }
+
+
+
 
 .services {
     height: 70vh;
