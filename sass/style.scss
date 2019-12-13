@@ -105,17 +105,24 @@ header {
                     color: $primary-color;
                 }
 
-                button {
+                a {
                     font-family: $primary-font;
                     font-weight: bold;
                     padding: 20px 30px;
                     font-size: 20px;
+                    text-decoration: none;
                     text-transform: uppercase;
                     margin: 20px;
                     border-radius: 5px;
                     border: none;
                     background-color: $second-color;
                     color: $primary-color;
+                    box-shadow: 0 0 30px $primary-color;
+                }
+
+                a:hover {
+                    color: white;
+                    box-shadow: 0 0 30px white;
                 }
             }
 

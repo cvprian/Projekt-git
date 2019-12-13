@@ -104,17 +104,24 @@ header .welcome .container .row h1 {
   color: green;
 }
 
-header .welcome .container .row button {
+header .welcome .container .row a {
   font-family: "Roboto Mono", monospace;
   font-weight: bold;
   padding: 20px 30px;
   font-size: 20px;
+  text-decoration: none;
   text-transform: uppercase;
   margin: 20px;
   border-radius: 5px;
   border: none;
   background-color: #4d260c;
   color: green;
+  box-shadow: 0 0 30px green;
+}
+
+header .welcome .container .row a:hover {
+  color: white;
+  box-shadow: 0 0 30px white;
 }
 
 .services {
