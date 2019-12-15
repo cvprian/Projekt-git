@@ -39,7 +39,7 @@ header .menu .container .logo a {
   text-decoration: none;
   font-family: 'Dancing Script', cursive;
   font-size: 40px;
-  color: #4d260c;
+  color: #15da60;
 }
 
 header .menu .container .navigation ul {
@@ -56,7 +56,7 @@ header .menu .container .navigation ul li {
 header .menu .container .navigation ul li a {
   display: block;
   font-family: "Roboto Mono", monospace;
-  color: green;
+  color: #f38c06;
   line-height: 60px;
   text-decoration: none;
   text-transform: uppercase;
@@ -91,7 +91,7 @@ header .welcome .container .row {
 header .welcome .container .row h2 {
   font-size: 40px;
   margin: 20px;
-  color: green;
+  color: #f38c06;
   font-family: "Gupter", serif;
   font-style: italic;
 }
@@ -101,7 +101,7 @@ header .welcome .container .row h1 {
   font-size: 60px;
   text-transform: uppercase;
   margin: 20px;
-  color: green;
+  color: #f38c06;
 }
 
 header .welcome .container .row a {
@@ -114,9 +114,9 @@ header .welcome .container .row a {
   margin: 20px;
   border-radius: 5px;
   border: none;
-  background-color: #4d260c;
-  color: green;
-  box-shadow: 0 0 30px green;
+  background-color: #15da60;
+  color: #f38c06;
+  box-shadow: 0 0 30px #f38c06;
 }
 
 header .welcome .container .row a:hover {
@@ -125,7 +125,7 @@ header .welcome .container .row a:hover {
 }
 
 .services {
-  height: 70vh;
+  height: 100%;
   padding: 5% 0;
 }
 
@@ -144,12 +144,9 @@ header .welcome .container .row a:hover {
   padding-top: 10px;
 }
 
-.services .row {
-  margin-top: 10%;
-}
-
 .services .row div {
   text-align: center;
+  padding-top: 10%;
 }
 
 .services .row div p {
@@ -157,13 +154,22 @@ header .welcome .container .row a:hover {
   color: gray;
 }
 
-.services .row div i {
-  border: 4px solid #4d260c;
+.services .row div div {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border: 4px solid #15da60;
   border-radius: 50%;
-  padding: 20px;
-  color: #4d260c;
+  margin: 0 auto;
+}
+
+.services .row div div i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #15da60;
   font-size: 36px;
-  margin-bottom: 20px;
 }
 
 .services .row div h4 {
@@ -172,7 +178,7 @@ header .welcome .container .row a:hover {
 }
 
 .portfolio {
-  height: 100vh;
+  height: 100%;
   background-color: aliceblue;
   padding: 40px 0;
 }
@@ -190,24 +196,32 @@ header .welcome .container .row a:hover {
   font-style: italic;
   color: gray;
   padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 .portfolio .row {
   margin-top: 50px;
 }
 
-.portfolio .element {
+.portfolio .row .element {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
 }
 
-.portfolio .element img {
+.portfolio .row .element .image a {
+  display: block;
+  height: 100%;
   width: 100%;
 }
 
-.portfolio .element .description {
+.portfolio .row .element .image a img {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio .row .element .description {
   height: 100px;
   background-color: white;
   display: -ms-flexbox;
@@ -221,7 +235,8 @@ header .welcome .container .row a:hover {
 }
 
 footer {
-  height: 10vh;
+  height: 100%;
+  padding: 20px 0;
 }
 
 footer .container {
@@ -262,5 +277,176 @@ footer .row ul li a i {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1023px) {
+  header .menu .container .row .logo {
+    -ms-flex: 0 0 30%;
+        flex: 0 0 30%;
+  }
+  header .menu .container .row .navigation {
+    -ms-flex: 0 0 70%;
+        flex: 0 0 70%;
+    max-width: none;
+  }
+  header .welcome .container .row h1 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  header .menu .container .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  header .menu .container .row .logo {
+    -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
+    padding: 0;
+  }
+  header .menu .container .row .navigation {
+    -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
+  }
+  header .menu .container .row .navigation ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  header .menu .container .row .navigation ul li {
+    height: 40px;
+  }
+  header .menu .container .row .navigation ul li a {
+    line-height: 40px;
+    font-size: 18px;
+  }
+  header .welcome .container .row h2 {
+    font-size: 32px;
+  }
+  header .welcome .container .row h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+  .services {
+    height: 100%;
+  }
+  .services h2 {
+    font-size: 32px;
+  }
+  .services .row {
+    padding-top: 10%;
+  }
+  .services .row div {
+    padding: 3%;
+  }
+  .services .row div div {
+    width: 50px;
+    height: 50px;
+  }
+  .services .row div div i {
+    font-size: 18px;
+    padding: 10px;
+  }
+  .portfolio {
+    height: 100%;
+  }
+  .portfolio .container h2 {
+    font-size: 32px;
+  }
+  .portfolio .container .row {
+    margin: 0;
+  }
+  .portfolio .container .row .element {
+    padding: 10px 50px;
+  }
+  footer {
+    height: 15vh;
+  }
+  footer .container .row p {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  header .menu .container .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  header .menu .container .row .navigation ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+  }
+  header .menu .container .row .navigation ul li {
+    height: 40px;
+  }
+  header .menu .container .row .navigation ul li a {
+    line-height: 40px;
+    font-size: 18px;
+  }
+  header .welcome .container .row h2 {
+    font-size: 32px;
+    margin-bottom: 0;
+  }
+  header .welcome .container .row h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  header .welcome .container .row a {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+  footer {
+    height: 30vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .services {
+    height: 100%;
+  }
+}
+
+@media (max-width: 359px) {
+  header .menu .container .row .navigation ul li {
+    height: 30px;
+  }
+  header .menu .container .row .navigation ul li a {
+    line-height: 30px;
+    font-size: 16px;
+  }
+  header .welcome .container .row h2 {
+    font-size: 26px;
+  }
+  header .welcome .container .row h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  header .welcome .container .row a {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+  .services {
+    height: 100%;
+  }
+  footer {
+    height: 25vh;
+  }
+  footer .container .row ul li a {
+    width: 40px;
+    height: 40px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
