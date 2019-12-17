@@ -21,60 +21,59 @@ p {
     font-family: $second-font;
 }
 
+.row {
+    margin: 0;
+}
+
 header {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     margin: auto;
     background-image: url("/images/headerphoto.jpg");
     background-position: center;
     background-size: cover;
 
-    .menu {
-        .container {
-            padding-top: 30px;
+    .container {
+        padding-top: 30px;
 
-            .logo {
-                text-align: center;
+        .logo {
+            text-align: center;
 
-                a {
-                    line-height: 60px;
-                    text-decoration: none;
-                    font-family: 'Dancing Script', cursive;
-                    font-size: 40px;
-                    color: $second-color;
-                }
-            }
-
-            .navigation {
-                ul {
-                    list-style: none;
-                    text-align: center;
-
-                    li {
-                        display: inline-block;
-                        margin-right: 5px;
-                        height: 60px;
-
-                        a {
-                            display: block;
-                            font-family: $primary-font;
-                            color: $primary-color;
-                            line-height: 60px;
-                            text-decoration: none;
-                            text-transform: uppercase;
-                            padding: 0px 10px;
-                            font-size: 14px;
-                        }
-
-                        a:hover {
-                            text-decoration: underline;
-                        }
-                    }
-                }
+            a {
+                line-height: 60px;
+                text-decoration: none;
+                font-family: 'Dancing Script', cursive;
+                font-size: 40px;
+                color: $second-color;
             }
         }
 
+        ul {
+            list-style: none;
+            text-align: center;
+
+            li {
+                display: inline-block;
+                margin-right: 5px;
+                height: 60px;
+
+                a {
+                    display: block;
+                    font-family: $primary-font;
+                    color: $primary-color;
+                    line-height: 60px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    padding: 0px 10px;
+                    font-size: 14px;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
     }
 
     .welcome {
@@ -82,80 +81,71 @@ header {
         align-items: center;
         flex-grow: 1;
 
-        .container {
-            .row {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+        .row {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-                h2 {
-                    font-size: 40px;
-                    margin: 20px;
-                    color: $primary-color;
-                    font-family: $second-font;
-                    font-style: italic;
-                }
-
-                h1 {
-                    font-family: $primary-font;
-                    font-size: 60px;
-                    text-transform: uppercase;
-                    margin: 20px;
-                    color: $primary-color;
-                }
-
-                a {
-                    font-family: $primary-font;
-                    font-weight: bold;
-                    padding: 20px 30px;
-                    font-size: 20px;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    margin: 20px;
-                    border-radius: 5px;
-                    border: none;
-                    background-color: $second-color;
-                    color: $primary-color;
-                    box-shadow: 0 0 30px $primary-color;
-                }
-
-                a:hover {
-                    color: white;
-                    box-shadow: 0 0 30px white;
-                }
+            h1 {
+                font-size: 40px;
+                margin: 20px;
+                color: $primary-color;
+                font-family: $second-font;
+                font-style: italic;
             }
 
-        }
+            h2 {
+                font-family: $primary-font;
+                font-size: 60px;
+                text-transform: uppercase;
+                margin: 20px;
+                color: $primary-color;
+            }
 
+            .btn {
+                font-family: $primary-font;
+                font-weight: bold;
+                padding: 20px 30px;
+                font-size: 20px;
+                text-transform: uppercase;
+                margin: 20px;
+                border-radius: 5px;
+                border: none;
+                background-color: $second-color;
+                color: $primary-color;
+                box-shadow: 0 0 30px $primary-color;
+            }
+
+            .btn:hover {
+                color: white;
+                box-shadow: 0 0 30px white;
+                cursor: pointer;
+            }
+        }
     }
 }
 
-
-
-
 .services {
-    height: 100%;
-    padding: 5% 0;
+    .container {
+        padding: 5% 0;
 
-    h2 {
-        font-size: 40px;
-        text-align: center;
-        font-family: $primary-font;
-        text-transform: uppercase;
-    }
+        h3 {
+            font-size: 40px;
+            text-align: center;
+            font-family: $primary-font;
+            text-transform: uppercase;
+        }
 
-    .postscript {
-        text-align: center;
-        font-family: $second-font;
-        font-style: italic;
-        color: gray;
-        padding-top: 10px;
-    }
+        .postscript {
+            text-align: center;
+            font-family: $second-font;
+            font-style: italic;
+            color: gray;
+            padding-top: 10px;
+        }
 
-    .row {
-
-        div {
+        .service {
             text-align: center;
             padding-top: 10%;
 
@@ -182,7 +172,6 @@ header {
                 }
             }
 
-
             h4 {
                 font-size: 24px;
                 margin-bottom: 20px;
@@ -192,54 +181,45 @@ header {
 }
 
 .portfolio {
-    height: 100%;
     background-color: aliceblue;
-    padding: 40px 0;
 
-    h2 {
-        font-size: 40px;
-        text-align: center;
-        font-family: $primary-font;
-        text-transform: uppercase;
-    }
+    .container {
+        padding: 5% 0;
 
-    .postscript {
-        text-align: center;
-        font-family: $second-font;
-        font-style: italic;
-        color: gray;
-        padding-top: 10px;
-        padding-bottom: 20px;
+        h3 {
+            font-size: 40px;
+            text-align: center;
+            font-family: $primary-font;
+            text-transform: uppercase;
+        }
 
-    }
+        .postscript {
+            text-align: center;
+            font-family: $second-font;
+            font-style: italic;
+            color: gray;
+            padding-top: 10px;
+            padding-bottom: 20px;
+        }
 
-    .row {
-        margin-top: 50px;
+        .row {
+            margin-top: 50px;
 
-        .element {
-            display: flex;
-            flex-direction: column;
-
-            .image {
+            .element {
+                display: flex;
+                flex-direction: column;
 
                 a {
                     display: block;
                     height: 100%;
                     width: 100%;
 
-
                     img {
                         width: 100%;
                         height: 100%;
-
                     }
                 }
-
-
-
             }
-
-
 
             .description {
                 height: 100px;
@@ -254,347 +234,257 @@ header {
 }
 
 footer {
-    height: 100%;
-    padding: 20px 0;
-
     .container {
-        height: 100%;
+        padding: 2% 0;
     }
 
     .row {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        height: 100%;
 
         ul {
             list-style: none;
             display: flex;
             justify-content: space-around;
 
-            li {
+            a {
+                display: block;
+                width: 50px;
+                height: 50px;
+                background-color: black;
+                text-align: center;
+                position: relative;
+                border-radius: 50%;
 
-
-                a {
-                    display: block;
-                    width: 50px;
-                    height: 50px;
-                    background-color: black;
-                    text-align: center;
-                    position: relative;
-                    border-radius: 50%;
-
-                    i {
-                        color: white;
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                    }
+                i {
+                    color: white;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                 }
             }
-
         }
     }
 }
 
 @media (max-width: 1023px) {
-    header {
-        .menu {
-            .container {
-                .row {
-                    .logo {
-                        flex: 0 0 30%;
-                    }
+    .logo {
+        flex: 0 0 30%;
+    }
 
-                    .navigation {
-                        flex: 0 0 70%;
-                        max-width: none;
-                    }
-                }
-            }
-        }
+    .navigation {
+        flex: 0 0 70%;
+        max-width: none;
+    }
 
-        .welcome {
-            .container {
-                .row {
-                    h1 {
-                        text-align: center;
-                    }
-                }
-            }
+    .welcome {
+        h2 {
+            text-align: center;
         }
     }
 }
 
-
-
 @media (max-width: 767px) {
     header {
+        .row {
+            display: flex;
+            flex-direction: column;
 
-        .menu {
+            ul {
+                display: flex;
+                flex-direction: column;
 
-            .container {
+                li {
+                    height: 40px;
 
-                .row {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-around;
-
-                    .logo {
-                        flex: 0 0 40%;
-                        padding: 0;
-                    }
-
-                    .navigation {
-                        flex: 0 0 40%;
-
-                        ul {
-
-                            display: flex;
-                            flex-direction: column;
-
-                            li {
-                                height: 40px;
-
-                                a {
-                                    line-height: 40px;
-                                    font-size: 18px;
-                                }
-                            }
-                        }
-
+                    a {
+                        font-size: 22px;
                     }
                 }
             }
         }
 
         .welcome {
-            .container {
+            .row {
+                h1 {
+                    font-size: 28px;
+                    text-align: center;
+                }
 
-                .row {
-                    h2 {
-                        font-size: 32px;
-                    }
-
-                    h1 {
-                        font-size: 36px;
-                        text-align: center;
-                    }
+                h2 {
+                    font-size: 30px;
+                    text-align: center;
                 }
             }
         }
     }
 
     .services {
-        height: 100%;
+        .container {
+            h3 {
+                font-size: 36px;
+            }
 
-        h2 {
-            font-size: 32px;
-        }
-
-        .row {
-            padding-top: 10%;
-
-            div {
-
-                padding: 3%;
+            .row {
+                padding-top: 5%;
 
                 div {
-                    width: 50px;
-                    height: 50px;
+                    padding: 3%;
 
-                    i {
-                        font-size: 18px;
-                        padding: 10px;
+                    div {
+                        width: 50px;
+                        height: 50px;
+
+                        i {
+                            font-size: 18px;
+                            padding: 10px;
+                        }
                     }
                 }
-
             }
         }
     }
 
     .portfolio {
-        height: 100%;
-
         .container {
-
-            h2 {
-                font-size: 32px;
+            h3 {
+                font-size: 36px;
             }
 
             .row {
+                padding: 0;
                 margin: 0;
-
-                .element {
-                    padding: 10px 50px;
-                }
             }
         }
     }
 
     footer {
-        height: 15vh;
-
-        .container {
-
-            .row {
-
-                p {
-                    text-align: center;
-                    margin-bottom: 10px;
-                }
-
-
-            }
+        p {
+            text-align: center;
+            margin-bottom: 10px;
         }
     }
 }
 
 @media (max-width: 767px) and (orientation: landscape) {
     header {
+        .row {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
 
-        .menu {
+            ul {
+                display: flex;
+                flex-direction: row;
 
-            .container {
+                li {
+                    height: 40px;
 
-                .row {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
+                    a {
+                        line-height: 40px;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
 
-                    .navigation {
-                        ul {
-                            display: flex;
-                            flex-direction: row;
+    .welcome {
+        h1 {
+            font-size: 32px;
+            margin-bottom: 0;
+        }
 
-                            li {
-                                height: 40px;
+        h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 0;
+        }
 
-                                a {
-                                    line-height: 40px;
-                                    font-size: 18px;
-                                }
-                            }
+        .btn {
+            padding: 12px 20px;
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 500px) and (orientation: landscape) {
+    header {
+        .container {
+            .row {
+                ul {
+                    li {
+                        height: 30px;
+
+                        a {
+                            line-height: 30px;
+                            font-size: 16px;
                         }
-
                     }
                 }
             }
         }
 
         .welcome {
-            .container {
+            .row {
+                h1 {
+                    font-size: 26px;
+                }
 
-                .row {
-                    h2 {
-                        font-size: 32px;
-                        margin-bottom: 0;
-                    }
+                h2 {
+                    font-size: 30px;
+                    text-align: center;
+                }
 
-                    h1 {
-                        font-size: 36px;
-                        text-align: center;
-                        margin-bottom: 0;
-                    }
-
-                    a {
-                        padding: 12px 20px;
-                        font-size: 16px;
-                    }
+                .btn {
+                    padding: 8px 10px;
+                    font-size: 12px;
                 }
             }
         }
-    }
-
-    footer {
-        height: 30vh;
-    }
-}
-
-@media (max-width: 600px) {
-    .services {
-        height: 100%;
     }
 }
 
 @media (max-width: 359px) {
     header {
+        .row {
+            ul {
+                li {
+                    height: 30px;
 
-        .menu {
-
-            .container {
-
-                .row {
-
-
-                    .logo {}
-
-                    .navigation {
-
-
-                        ul {
-
-
-                            li {
-                                height: 30px;
-
-                                a {
-                                    line-height: 30px;
-                                    font-size: 16px;
-                                }
-                            }
-                        }
-
+                    a {
+                        line-height: 30px;
+                        font-size: 16px;
                     }
                 }
             }
         }
 
         .welcome {
-            .container {
+            .row {
+                h1 {
+                    font-size: 26px;
+                }
 
-                .row {
-                    h2 {
-                        font-size: 26px;
-                    }
+                h2 {
+                    font-size: 30px;
+                    text-align: center;
+                }
 
-                    h1 {
-                        font-size: 30px;
-                        text-align: center;
-                    }
-
-                    a {
-                        padding: 10px 15px;
-                        font-size: 12px;
-                    }
+                .btn {
+                    padding: 8px 10px;
+                    font-size: 12px;
                 }
             }
         }
-    }
-
-    .services {
-        height: 100%;
     }
 
     footer {
-        height: 25vh;
-
-        .container {
-            .row {
-
-
-                ul {
-                    li {
-                        a {
-                            width: 40px;
-                            height: 40px;
-                        }
-                    }
-                }
-            }
+        a {
+            width: 40px;
+            height: 40px;
         }
     }
-
-
 }
