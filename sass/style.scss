@@ -13,7 +13,7 @@ serif;
 
 body {
     font-family: $primary-font;
-    max-width: 1360px;
+
     margin: 0 auto;
 }
 
@@ -29,7 +29,6 @@ header {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: auto;
     background-image: url("/images/headerphoto.jpg");
     background-position: center;
     background-size: cover;
