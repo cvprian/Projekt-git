@@ -14,115 +14,99 @@ p {
 }
 
 .row {
+  padding: 0;
   margin: 0;
 }
 
 header {
+  background-image: url(/images/headerphoto.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+header .container {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
   min-height: 100vh;
-  background-image: url("/images/headerphoto.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
-header .container {
-  padding-top: 30px;
-}
-
-header .container .logo {
-  text-align: center;
 }
 
 header .container .logo a {
-  line-height: 60px;
-  text-decoration: none;
-  font-family: 'Dancing Script', cursive;
-  font-size: 40px;
+  display: block;
+  height: 70px;
+  line-height: 70px;
   color: #15da60;
+  font-family: "Dancing Script";
+  text-decoration: none;
+  font-size: 48px;
+  font-style: italic;
+  text-align: center;
 }
 
 header .container ul {
   list-style: none;
-  text-align: center;
-}
-
-header .container ul li {
-  display: inline-block;
-  margin-right: 5px;
-  height: 60px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
 }
 
 header .container ul li a {
   display: block;
-  font-family: "Roboto Mono", monospace;
   color: #f38c06;
-  line-height: 60px;
+  font-family: "Roboto Mono", monospace;
   text-decoration: none;
-  text-transform: uppercase;
-  padding: 0px 10px;
-  font-size: 14px;
+  font-size: 26px;
+  height: 70px;
+  line-height: 70px;
 }
 
 header .container ul li a:hover {
-  text-decoration: underline;
+  color: white;
 }
 
-header .welcome {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-positive: 1;
-      flex-grow: 1;
-}
-
-header .welcome .row {
-  display: -ms-flexbox;
-  display: flex;
+header .container .welcome {
   -ms-flex-direction: column;
       flex-direction: column;
+  text-align: center;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
   -ms-flex-pack: center;
       justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
 }
 
-header .welcome .row h1 {
-  font-size: 40px;
-  margin: 20px;
+header .container .welcome .welcome-title {
+  font-size: 48px;
+  font-style: italic;
   color: #f38c06;
   font-family: "Gupter", serif;
-  font-style: italic;
 }
 
-header .welcome .row h2 {
-  font-family: "Roboto Mono", monospace;
+header .container .welcome .welcome-subtitle {
   font-size: 60px;
-  text-transform: uppercase;
-  margin: 20px;
   color: #f38c06;
-}
-
-header .welcome .row .btn {
   font-family: "Roboto Mono", monospace;
-  font-weight: bold;
-  padding: 20px 30px;
-  font-size: 20px;
-  text-transform: uppercase;
-  margin: 20px;
-  border-radius: 5px;
-  border: none;
-  background-color: #15da60;
-  color: #f38c06;
-  box-shadow: 0 0 30px #f38c06;
+  margin-bottom: 50px;
 }
 
-header .welcome .row .btn:hover {
+header .container .welcome .btn {
+  height: 60px;
+  width: 180px;
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
   color: white;
-  box-shadow: 0 0 30px white;
+  background-color: #15da60;
+  border-radius: 10px;
+  border: 0px;
+  margin: 0 auto;
+}
+
+header .container .welcome .btn:hover {
+  color: black;
+  background-color: white;
   cursor: pointer;
 }
 
@@ -277,46 +261,29 @@ footer .row ul a i {
 }
 
 @media (max-width: 1023px) {
-  .logo {
-    -ms-flex: 0 0 30%;
-        flex: 0 0 30%;
-  }
-  .navigation {
-    -ms-flex: 0 0 70%;
-        flex: 0 0 70%;
-    max-width: none;
-  }
-  .welcome h2 {
-    text-align: center;
+  header .container .menu-link {
+    font-size: 20px;
   }
 }
 
 @media (max-width: 767px) {
-  header .row {
-    display: -ms-flexbox;
-    display: flex;
+  header .container ul {
     -ms-flex-direction: column;
         flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
   }
-  header .row ul {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-  }
-  header .row ul li {
+  header .container ul .menu-link {
+    font-size: 16px;
     height: 40px;
+    line-height: 40px;
   }
-  header .row ul li a {
-    font-size: 22px;
-  }
-  header .welcome .row h1 {
-    font-size: 28px;
-    text-align: center;
-  }
-  header .welcome .row h2 {
+  header .container .welcome .welcome-title {
+    margin-top: 50px;
     font-size: 30px;
-    text-align: center;
+  }
+  header .container .welcome .welcome-subtitle {
+    font-size: 34px;
   }
   .services .container h3 {
     font-size: 36px;
@@ -349,81 +316,50 @@ footer .row ul a i {
 }
 
 @media (max-width: 767px) and (orientation: landscape) {
-  header .row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  header .row ul {
-    display: -ms-flexbox;
-    display: flex;
+  header .container ul {
     -ms-flex-direction: row;
         flex-direction: row;
+    -ms-flex-align: center;
+        align-items: center;
   }
-  header .row ul li {
+  header .container ul .menu-link {
+    font-size: 16px;
     height: 40px;
-  }
-  header .row ul li a {
     line-height: 40px;
-    font-size: 18px;
   }
-  .welcome h1 {
-    font-size: 32px;
-    margin-bottom: 0;
-  }
-  .welcome h2 {
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 0;
-  }
-  .welcome .btn {
-    padding: 12px 20px;
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 500px) and (orientation: landscape) {
-  header .container .row ul li {
-    height: 30px;
-  }
-  header .container .row ul li a {
-    line-height: 30px;
-    font-size: 16px;
-  }
-  header .welcome .row h1 {
-    font-size: 26px;
-  }
-  header .welcome .row h2 {
+  header .container .welcome .welcome-title {
+    margin-top: 50px;
     font-size: 30px;
-    text-align: center;
   }
-  header .welcome .row .btn {
-    padding: 8px 10px;
-    font-size: 12px;
+  header .container .welcome .welcome-subtitle {
+    font-size: 34px;
+    margin-bottom: 0;
+  }
+  header .container .welcome .btn {
+    height: 40px;
+    width: 130px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 359px) {
-  header .row ul li {
-    height: 30px;
-  }
-  header .row ul li a {
-    line-height: 30px;
+  header .container ul .menu-link {
     font-size: 16px;
+    height: 30px;
+    line-height: 30px;
   }
-  header .welcome .row h1 {
-    font-size: 26px;
+  header .container .welcome .welcome-title {
+    margin-top: 30px;
+    font-size: 20px;
   }
-  header .welcome .row h2 {
-    font-size: 30px;
-    text-align: center;
+  header .container .welcome .welcome-subtitle {
+    font-size: 24px;
+    margin-bottom: 20px;
   }
-  header .welcome .row .btn {
-    padding: 8px 10px;
-    font-size: 12px;
+  header .container .welcome .btn {
+    height: 40px;
+    width: 130px;
+    font-size: 16px;
   }
   footer a {
     width: 40px;

@@ -13,7 +13,6 @@ serif;
 
 body {
     font-family: $primary-font;
-
     margin: 0 auto;
 }
 
@@ -22,103 +21,93 @@ p {
 }
 
 .row {
+    padding: 0;
     margin: 0;
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-image: url("/images/headerphoto.jpg");
+    background-image: url(/images/headerphoto.jpg);
     background-position: center;
     background-size: cover;
+    min-height: 100vh;
 
     .container {
-        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
 
         .logo {
-            text-align: center;
-
             a {
-                line-height: 60px;
-                text-decoration: none;
-                font-family: 'Dancing Script', cursive;
-                font-size: 40px;
+                display: block;
+                height: 70px;
+                line-height: 70px;
                 color: $second-color;
+                font-family: "Dancing Script";
+                text-decoration: none;
+                font-size: 48px;
+                font-style: italic;
+                text-align: center;
             }
         }
 
         ul {
             list-style: none;
-            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            height: 100%;
 
             li {
-                display: inline-block;
-                margin-right: 5px;
-                height: 60px;
-
                 a {
                     display: block;
-                    font-family: $primary-font;
                     color: $primary-color;
-                    line-height: 60px;
+                    font-family: $primary-font;
                     text-decoration: none;
-                    text-transform: uppercase;
-                    padding: 0px 10px;
-                    font-size: 14px;
+                    font-size: 26px;
+                    height: 70px;
+                    line-height: 70px;
                 }
 
                 a:hover {
-                    text-decoration: underline;
+                    color: white;
                 }
             }
         }
-    }
 
-    .welcome {
-        display: flex;
-        align-items: center;
-        flex-grow: 1;
-
-        .row {
-            display: flex;
+        .welcome {
             flex-direction: column;
+            text-align: center;
+            flex-grow: 1;
             justify-content: center;
-            align-items: center;
 
-            h1 {
-                font-size: 40px;
-                margin: 20px;
+            .welcome-title {
+                font-size: 48px;
+                font-style: italic;
                 color: $primary-color;
                 font-family: $second-font;
-                font-style: italic;
             }
 
-            h2 {
-                font-family: $primary-font;
+            .welcome-subtitle {
                 font-size: 60px;
-                text-transform: uppercase;
-                margin: 20px;
                 color: $primary-color;
+                font-family: $primary-font;
+                margin-bottom: 50px;
             }
 
             .btn {
+                height: 60px;
+                width: 180px;
                 font-family: $primary-font;
-                font-weight: bold;
-                padding: 20px 30px;
                 font-size: 20px;
-                text-transform: uppercase;
-                margin: 20px;
-                border-radius: 5px;
-                border: none;
+                color: white;
                 background-color: $second-color;
-                color: $primary-color;
-                box-shadow: 0 0 30px $primary-color;
+                border-radius: 10px;
+                border: 0px;
+                margin: 0 auto;
             }
 
             .btn:hover {
-                color: white;
-                box-shadow: 0 0 30px white;
+                color: black;
+                background-color: white;
                 cursor: pointer;
             }
         }
@@ -269,52 +258,37 @@ footer {
 }
 
 @media (max-width: 1023px) {
-    .logo {
-        flex: 0 0 30%;
-    }
-
-    .navigation {
-        flex: 0 0 70%;
-        max-width: none;
-    }
-
-    .welcome {
-        h2 {
-            text-align: center;
+    header {
+        .container {
+            .menu-link {
+                font-size: 20px;
+            }
         }
     }
 }
 
 @media (max-width: 767px) {
     header {
-        .row {
-            display: flex;
-            flex-direction: column;
-
+        .container {
             ul {
-                display: flex;
                 flex-direction: column;
+                align-items: center;
 
-                li {
+                .menu-link {
+                    font-size: 16px;
                     height: 40px;
-
-                    a {
-                        font-size: 22px;
-                    }
+                    line-height: 40px;
                 }
             }
-        }
 
-        .welcome {
-            .row {
-                h1 {
-                    font-size: 28px;
-                    text-align: center;
+            .welcome {
+                .welcome-title {
+                    margin-top: 50px;
+                    font-size: 30px;
                 }
 
-                h2 {
-                    font-size: 30px;
-                    text-align: center;
+                .welcome-subtitle {
+                    font-size: 34px;
                 }
             }
         }
@@ -369,77 +343,33 @@ footer {
 
 @media (max-width: 767px) and (orientation: landscape) {
     header {
-        .row {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-
-            ul {
-                display: flex;
-                flex-direction: row;
-
-                li {
-                    height: 40px;
-
-                    a {
-                        line-height: 40px;
-                        font-size: 18px;
-                    }
-                }
-            }
-        }
-    }
-
-    .welcome {
-        h1 {
-            font-size: 32px;
-            margin-bottom: 0;
-        }
-
-        h2 {
-            font-size: 36px;
-            text-align: center;
-            margin-bottom: 0;
-        }
-
-        .btn {
-            padding: 12px 20px;
-            font-size: 16px;
-        }
-    }
-}
-
-@media (max-width: 500px) and (orientation: landscape) {
-    header {
         .container {
-            .row {
-                ul {
-                    li {
-                        height: 30px;
+            ul {
+                flex-direction: row;
+                align-items: center;
 
-                        a {
-                            line-height: 30px;
-                            font-size: 16px;
-                        }
-                    }
+                .menu-link {
+                    font-size: 16px;
+                    height: 40px;
+                    line-height: 40px;
                 }
             }
-        }
 
-        .welcome {
-            .row {
-                h1 {
-                    font-size: 26px;
+            .welcome {
+                .welcome-title {
+                    margin-top: 50px;
+                    font-size: 30px;
                 }
 
-                h2 {
-                    font-size: 30px;
-                    text-align: center;
+                .welcome-subtitle {
+                    font-size: 34px;
+                    margin-bottom: 0;
                 }
 
                 .btn {
-                    padding: 8px 10px;
-                    font-size: 12px;
+                    height: 40px;
+                    width: 130px;
+                    font-size: 16px;
                 }
             }
         }
@@ -447,34 +377,32 @@ footer {
 }
 
 @media (max-width: 359px) {
-    header {
-        .row {
-            ul {
-                li {
-                    height: 30px;
 
-                    a {
-                        line-height: 30px;
-                        font-size: 16px;
-                    }
+    header {
+        .container {
+            ul {
+                .menu-link {
+                    font-size: 16px;
+                    height: 30px;
+                    line-height: 30px;
                 }
             }
-        }
 
-        .welcome {
-            .row {
-                h1 {
-                    font-size: 26px;
+            .welcome {
+                .welcome-title {
+                    margin-top: 30px;
+                    font-size: 20px;
                 }
 
-                h2 {
-                    font-size: 30px;
-                    text-align: center;
+                .welcome-subtitle {
+                    font-size: 24px;
+                    margin-bottom: 20px
                 }
 
                 .btn {
-                    padding: 8px 10px;
-                    font-size: 12px;
+                    height: 40px;
+                    width: 130px;
+                    font-size: 16px;
                 }
             }
         }
