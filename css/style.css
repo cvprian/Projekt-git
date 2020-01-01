@@ -13,11 +13,6 @@ p {
   font-family: "Gupter", serif;
 }
 
-.row {
-  padding: 0;
-  margin: 0;
-}
-
 header {
   background-image: url(/images/headerphoto.jpg);
   background-position: center;
@@ -111,7 +106,7 @@ header .container .welcome .btn:hover {
 }
 
 .services .container {
-  padding: 5% 0;
+  padding-top: 30px;
 }
 
 .services .container h3 {
@@ -167,7 +162,7 @@ header .container .welcome .btn:hover {
 }
 
 .portfolio .container {
-  padding: 5% 0;
+  padding-top: 30px;
 }
 
 .portfolio .container h3 {
@@ -222,7 +217,7 @@ header .container .welcome .btn:hover {
 }
 
 footer .container {
-  padding: 2% 0;
+  padding-top: 30px;
 }
 
 footer .row {

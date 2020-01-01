@@ -20,10 +20,6 @@ p {
     font-family: $second-font;
 }
 
-.row {
-    padding: 0;
-    margin: 0;
-}
 
 header {
     background-image: url(/images/headerphoto.jpg);
@@ -116,7 +112,7 @@ header {
 
 .services {
     .container {
-        padding: 5% 0;
+        padding-top: 30px;
 
         h3 {
             font-size: 40px;
@@ -172,7 +168,7 @@ header {
     background-color: aliceblue;
 
     .container {
-        padding: 5% 0;
+        padding-top: 30px;
 
         h3 {
             font-size: 40px;
@@ -223,7 +219,7 @@ header {
 
 footer {
     .container {
-        padding: 2% 0;
+        padding-top: 30px;
     }
 
     .row {
